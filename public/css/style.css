@@ -292,6 +292,7 @@ footer ul li:hover {
 
     footer ul li {
         transform: scale(0.6);
+        font-size: 1.3rem;
     }
 
     footer ul li:hover {
