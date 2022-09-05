@@ -14,9 +14,9 @@
     <h1>QuoteBook</h1>
     </header>
     <main>
-        <div class="quote">
-            <h2>Quote of the day</h2>
-            <p>PLACEHOLDER</p>
+        <div class="quoteItem">
+            <h2>-- Quote of the day --</h2>
+            <p><%= quotes[Math.floor(Math.random() * quotes.length)].quote %></p>
         </div>
         <div class="logo">
             <span>QUOTE
