@@ -47,6 +47,13 @@ main {
     padding: 3rem calc((100vw - 1300px) / 2);
 }
 
+main ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* FORMS AND BUTTONS */
 
 .form {
@@ -244,6 +251,11 @@ footer ul li:hover {
     h1 {
         font-size: 1.5rem;
     }
+
+    input {
+        width: 66%;
+    }
+
     .btn {
         width: 66%;
     }
