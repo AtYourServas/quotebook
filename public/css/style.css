@@ -269,7 +269,8 @@ footer ul li:hover {
 
     header {
         width: fit-content;
-        margin:1rem auto;
+        margin: 1rem auto;
+        z-index: 3;
     }
 
     h1 {
