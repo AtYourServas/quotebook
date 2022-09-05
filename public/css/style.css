@@ -111,32 +111,12 @@ input:active{
     color: lightskyblue;
 }
 
-.btn a:visited {
-    background: blueviolet;
-    color: lightskyblue;
-}
-
-.btn a:visited:hover {
-    background: purple;
-    color: lightskyblue;
-}
-
 .btn a:active {
     background: blueviolet;
     color: lightskyblue;
 }
 
 .btn a:active:hover {
-    background: purple;
-    color: lightskyblue;
-}
-
-.btn a:link {
-    background: blueviolet;
-    color: lightskyblue;
-}
-
-.btn a:link:hover {
     background: purple;
     color: lightskyblue;
 }
