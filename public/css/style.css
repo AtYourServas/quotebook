@@ -82,8 +82,8 @@ input:active{
 .btn {
     background: blueviolet;
     color: lightskyblue;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
+    padding: 0 1rem;
+    margin: 0 1rem;
     border: 1px solid purple;
     border-radius: 1rem;
     cursor: pointer;
