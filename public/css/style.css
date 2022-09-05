@@ -8,6 +8,7 @@
     text-decoration: none;
     list-style: none;
     background: lightskyblue;
+    position: relative;
 }
 
 header {
@@ -21,6 +22,7 @@ header {
 h1{
     font-size: 3rem;
     transition: 0.5s ease all;
+    z-index: 1;
 }
 
 h1:hover{
@@ -43,7 +45,7 @@ h2:hover{
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 75vh;
+    min-height: 90vh;
     padding: 1rem calc((100vw - 1300px) / 2);
 }
 
@@ -54,10 +56,20 @@ main ul {
     align-items: center;
 }
 
+main ul li {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: lightskyblue;
+    transition: 0.5s ease all;
+    z-index: 3;
+}
+
 /* FORMS AND BUTTONS */
 
 .form {
-    margin: 25%;
+    margin-top: 33%;
     padding: 2rem;
 }
 
@@ -82,13 +94,15 @@ input:active{
 .btn {
     background: blueviolet;
     color: lightskyblue;
-    padding: 0 1rem;
-    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem 1rem 1.5rem;
     border: 1px solid purple;
     border-radius: 1rem;
     cursor: pointer;
     transition: 0.5s ease all;
     width: 75%;
+    min-height: auto;
+    z-index: 1;
 }
 
 .btn:hover {
@@ -100,7 +114,7 @@ input:active{
     display: block;
     background: blueviolet;
     color: lightskyblue;
-    padding: 0.5rem 0.5rem;
+    padding: 0.25rem 0.5rem;
     margin: .5rem;
     transition: 0.5s ease all;
     border-radius: 1rem;
@@ -126,6 +140,7 @@ input:active{
 
 .del {
     font-size: 2rem;
+    margin-left: 1rem;
 }
 .del:hover {
     cursor: pointer;
@@ -139,6 +154,7 @@ input:active{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .quote h2 {
@@ -176,6 +192,10 @@ input:active{
     color: purple;
 }
 
+.quotes__container {
+    position: relative;
+}
+
 /* LOGO STYLING, THIS COULD PROBABLY BE BETTER */
 
 .logo {
@@ -186,6 +206,7 @@ input:active{
     justify-content: center;
     align-items: center;
     transition: .5s ease all;
+    padding-left: 4rem;
 }
 
 .logo:hover {
@@ -198,11 +219,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: lightskyblue;
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 1vh;
+    z-index: 2
 }
 
 footer ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1.5rem;
 }
 
@@ -227,8 +255,22 @@ footer ul li:hover {
         padding: 0;
     }
 
+    .quote p:hover{
+        border: 4px solid blue;
+        padding: 1rem;
+        border-radius: 10%;
+        transform: scale(1);
+        color: purple;
+    }
+
     .logo {
         display: none;
+    }
+
+    header {
+        width: fit-content;
+        margin: 1rem auto;
+        z-index: 3;
     }
 
     h1 {
@@ -241,5 +283,26 @@ footer ul li:hover {
 
     .btn {
         width: 66%;
+    }
+
+    footer {
+        top: 0;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    footer ul li {
+        transform: scale(0.6);
+        font-size: 1.3rem;
+    }
+
+    footer ul li:hover {
+        transform: scale(0.8);
     }
 }
