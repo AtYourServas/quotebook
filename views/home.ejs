@@ -16,7 +16,7 @@
     <main>
         <div class="quoteItem quote">
             <h2>-- Quote of the day --</h2>
-            <p><%= quotes[Math.floor(Math.random() * quotes.length)].quote %></p>
+            <p><%= quotes.length < 1 ? "A wise man once said that the easiest way to add quotes to this database is with the Manage Quotes button over there." : quotes[Math.floor(Math.random() * quotes.length)].quote %></p>
         </div>
         <div class="logo">
             <span>QUOTE
