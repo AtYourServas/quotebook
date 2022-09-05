@@ -1,3 +1,4 @@
+/* GENERAL STYLING */
 
 * {
     box-sizing: border-box;
@@ -10,7 +11,7 @@
 }
 
 header {
-    height: 5rem;
+    height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +19,7 @@ header {
 }
 
 h1{
-    font-size: 5rem;
+    font-size: 3rem;
     transition: 0.5s ease all;
 }
 
@@ -27,12 +28,110 @@ h1:hover{
     color: purple;
 }
 
+h2 {
+    font-size: 2rem;
+    transition: 0.5s ease all;
+    padding: 0.5rem 2rem;
+}
+
+h2:hover{
+    transform: scale(1.1);
+    color: purple;
+    background: transparent;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 75vh;
     padding: 3rem calc((100vw - 1300px) / 2);
 }
+
+main ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FORMS AND BUTTONS */
+
+.form {
+    margin: 25%;
+    padding: 2rem;
+}
+
+input {
+    width: 75%;
+    height: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input:hover{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+input:active{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    background: lightblue;
+}
+
+.btn {
+    background: blueviolet;
+    color: lightskyblue;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border: 1px solid purple;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.5s ease all;
+    width: 75%;
+}
+
+.btn:hover {
+    background: purple;
+    color: lightskyblue;
+}
+
+.btn a {
+    background: blueviolet;
+    color: lightskyblue;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    transition: 0.5s ease all;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.btn a:hover {
+    background: purple;
+    color: lightskyblue;
+}
+
+.btn a:active {
+    background: blueviolet;
+    color: lightskyblue;
+}
+
+.btn a:active:hover {
+    background: purple;
+    color: lightskyblue;
+}
+
+/* FONT AWESOME DELETE BUTTON */
+
+.del {
+    font-size: 2rem;
+}
+.del:hover {
+    cursor: pointer;
+    color: red;
+}
+
+/* QUOTE OF THE DAY SPECIFICS */
 
 .quote {
     display: flex;
@@ -72,7 +171,11 @@ main {
     border: 4px solid blue;
     padding: 2rem;
     border-radius: 20%;
+    transform: scale(1.1);
+    color: purple;
 }
+
+/* LOGO STYLING, THIS COULD PROBABLY BE BETTER */
 
 .logo {
     font-size: 10rem;
@@ -87,6 +190,8 @@ main {
 .logo:hover {
     color: purple;
 }
+
+/* FOOTER NAV LINK STYLING */
 
 footer {
     display: flex;
@@ -110,13 +215,28 @@ footer ul li {
 footer ul li:hover {
     border: 1px solid purple;
     transform: scale(1.2);
+    cursor: pointer;
 }
+
+/* MOBILE RESPONSIVE STUFF */
 
 @media screen and (max-width: 900px) {
     main {
         grid-template-columns: 1fr;
     }
+
     .logo {
         display: none;
     }
+    h1 {
+        font-size: 1.5rem;
+    }
 
+    input {
+        width: 66%;
+    }
+
+    .btn {
+        width: 66%;
+    }
+}

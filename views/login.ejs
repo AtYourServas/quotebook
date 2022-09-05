@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Log-In</title>
 </head>
 <body>
     <% if (locals.messages.errors) { %>
@@ -17,10 +18,16 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/login" method="POST">
+<header>
+    <h1>Log-In</h1>
+</header>
+<main>
+    <form action="/login" method="POST" class="form">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
-        <input type="submit">
+        <input type="submit" class="btn">
     </form>
+    <div class="logo">QUOTE BOOK</div>
+</main>
 </body>
 </html>
