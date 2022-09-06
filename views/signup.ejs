@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-
-    <header>
-        <h1>Sign Up!</h1>
-    </header>
-    
-    <main>
+<body class="signup">
+    <div class="organize">
+        <h1>No more need for pen and paper. Come and let us do the hard work for you</h1>
+        <h2>
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+        </h2>
         <form action="/signup" method="POST" class="form">
             <input type="text" name="userName" placeholder="User Name">
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Password">
             <input type="password" name="confirmPassword" placeholder="Confirm Password">
-            <input type="submit" class="btn">
+            <input type="submit" class="btn2">
         </form>
-        <div class="logo">QUOTE BOOK</div>
-    </main>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
