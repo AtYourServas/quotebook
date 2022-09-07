@@ -2,6 +2,16 @@
 /* test */
 /* Banner */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+}
+
 #banner {
     display: -moz-flex;
     display: -webkit-flex;
@@ -145,6 +155,7 @@ body.landing #page-wrapper {
 #banner .inner p{
     padding: 3em 
 }
+
 /* sign up page */
 
 .signup{
@@ -163,9 +174,10 @@ body.landing #page-wrapper {
     color:white;
 }
 .organize{
-    padding-left: 25%;
-    padding-right: 30%;
-    padding-top: 15%;
+    padding-left: 27%;
+    padding-right: 35%;
+    padding-top: 13%;
+    max-height: 100vh;
 }
 .organize,.organize form, .organize h2{
     display: flex;
@@ -194,6 +206,11 @@ body.landing #page-wrapper {
     background: gray;
     color: white;
 }
+
+.signup .organize h1{
+    font-size: 3rem;
+}
+
 /* log in */
 .login{
     background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0)), url("../images/login.jpg");
@@ -211,13 +228,16 @@ body.landing #page-wrapper {
     padding-left: 10%;
     padding-right: 50%;
 }
+
 .login .organize h1{
     color:white
 }
+
 .organize .error{
     color: white;
     padding-top: 10%;
 }
+
 /* home */
 .home{
     background-image: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/cozy.jpg");
@@ -228,18 +248,46 @@ body.landing #page-wrapper {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
     padding-top: 0;
 }
+
+.home #banner {
+    max-height: 100vh;
+    width: 100%;
+}
+
+.home #page-wrapper{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: content;
+    height: 50vh;
+}
+
+.home #page-wrapper .inner{
+    max-height: 60vh;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
 .home a,a {
     background: ghostwhite;
     color: black;
     padding: 0.5rem;
-    margin: 0.5rem 1rem 1.5rem;
+    margin: 3rem 1rem 1.5rem;
     border: 1px solid black;
     border-radius: 1rem;
     cursor: pointer;
     transition: 0.5s ease all;
-    width: 15%;
+    width: 15rem;
     min-height: auto;
 }
 
@@ -257,9 +305,7 @@ body.landing #page-wrapper {
     -ms-transition-delay: 1s;
     transition-delay: 1s;
 }
-.home #banner h2{
-    margin-bottom: 50%;
-}
+
 .database{
     background-image: -moz-linear-gradient(top, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("../images/database.jpg");
     background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("../images/database.jpg");
@@ -272,23 +318,55 @@ body.landing #page-wrapper {
     padding-top: 0;
 }
 .database h2{
+    display: flex;
     text-align: center;
-    margin-top: 5%;
+    background: rgba(0,0,0,0.6);
+    width: fit-content;
+    margin: 1vw 25vw 0 25vw;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-shadow: #fff 0 0 0 1px;
+    text-decoration: solid;
+    color: white;
 }
+
+.database h2:hover{
+    background: rgba(0,0,0,0.2);
+    color: black;
+}
+
 .box{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     
 }
+
 .organizeLeft,.organizeRight{
-    padding-top: 10%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
-    padding-top: 5%;
 }
+
+.organizeLeft{
+    padding: 5%;
+    max-width: 50vw;
+}
+
+.organizeLeft li {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background: rgba(0,0,0,0.1);
+}
+.organizeLeft li:hover{
+    background: rgba(0,0,0,0.6);
+    color: white;
+}
+
 .organizeRight{
-    padding-right: 5%;
+    padding: 5%;
     align-items: center;
     text-align: center;
 }
@@ -305,24 +383,6 @@ body.landing #page-wrapper {
     width: 50%;
     min-height: auto;
 }
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-decoration: none;
-    list-style: none;
-    /* background: lightskyblue; */
-    position: relative;
-}
-
-header {
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem;
-}
 
 h1{
     font-size: 3rem;
@@ -330,61 +390,21 @@ h1{
     z-index: 1;
 }
 
-/* h1:hover{
-    transform: scale(1.1);
-    color: purple;
-} */
-
 h2 {
     font-size: 2rem;
     transition: 0.5s ease all;
     padding: 0.5rem 2rem;
 }
 
-/* h2:hover{
-    transform: scale(1.1);
-    color: white;
-    background: transparent;
-} */
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 90vh;
-    padding: 1rem calc((100vw - 1300px) / 2);
-}
-
-main ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-main ul li {
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid black;
-    border-radius: 10px;
-    background: lightskyblue;
-    transition: 0.5s ease all;
-    z-index: 3;
-}
-
 /* FORMS AND BUTTONS */
 
-/* .form {
-    margin-top: 33%;
-    padding: 2rem;
-} */
-
 input {
-    width: 150%;
     height: 2rem;
     margin: 1rem;
     padding: 1rem;
     border: 1px solid black;
     border-radius: 5px;
+    width: 20rem;
 }
 
 input:hover{
@@ -393,52 +413,6 @@ input:hover{
 
 input:active{
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
-    background: lightblue;
-}
-
-.btn {
-    background: blueviolet;
-    color: lightskyblue;
-    padding: 0.5rem;
-    margin: 0.5rem 1rem 1.5rem;
-    border: 1px solid purple;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: 0.5s ease all;
-    width: 75%;
-    min-height: auto;
-    z-index: 1;
-}
-
-.btn:hover {
-    background: purple;
-    color: lightskyblue;
-}
-
-.btn a {
-    display: block;
-    background: blueviolet;
-    color: lightskyblue;
-    padding: 0.25rem 0.5rem;
-    margin: .5rem;
-    transition: 0.5s ease all;
-    border-radius: 1rem;
-    text-align: center;
-}
-
-.btn a:hover {
-    background: purple;
-    color: lightskyblue;
-}
-
-.btn a:active {
-    background: blueviolet;
-    color: lightskyblue;
-}
-
-.btn a:active:hover {
-    background: purple;
-    color: lightskyblue;
 }
 
 /* FONT AWESOME DELETE BUTTON */
@@ -452,164 +426,51 @@ input:active{
     color: red;
 }
 
-/* QUOTE OF THE DAY SPECIFICS */
-
-.quote {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.quote h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    font-style: oblique;
-}
-
-.quote p::before {
-    content: open-quote;
-    font-size: 4rem;
-    color: #99b9ff;
-}
-
-.quote p {
-    border: 4px dashed purple;
-    padding: 1rem;
-    border-radius: 10%;
-    font-style: italic;
-    transition: 0.5s ease all;
-}
-
-.quote p::after {
-    content: close-quote;
-    font-size: 4rem;
-    color: #99b9ff;
-}
-
-.quote p:hover {
-    border: 4px solid blue;
-    padding: 2rem;
-    border-radius: 20%;
-    transform: scale(1.1);
-    color: purple;
-}
-
-.quotes__container {
-    position: relative;
-}
-
-/* LOGO STYLING, THIS COULD PROBABLY BE BETTER */
-
-.logo {
-    font-size: 10rem;
-    color: blueviolet;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: .5s ease all;
-    padding-left: 4rem;
-}
-
-.logo:hover {
-    color: purple;
-}
-
-
-
-/* FOOTER NAV LINK STYLING */
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    max-height: 1vh;
-    z-index: 2
-}
-
-footer ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-footer ul li {
-    padding: 1rem;
-    border: 1px solid blue;
-    border-radius: 50%;
-    transition: all 0.3s ease-in-out;
-}
-
-footer ul li:hover {
-    border: 1px solid purple;
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
 /* MOBILE RESPONSIVE STUFF */
 
 @media screen and (max-width: 900px) {
-    main {
-        grid-template-columns: 1fr;
-        padding: 0;
-    }
-
-    .quote p:hover{
-        border: 4px solid blue;
-        padding: 1rem;
-        border-radius: 10%;
-        transform: scale(1);
-        color: purple;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    header {
-        width: fit-content;
-        margin: 1rem auto;
-        z-index: 3;
+    .home #page-wrapper{
+        width: 100%;
+        padding-top: 0;
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     input {
-        width: 66%;
+        width: 100%
+    }
+    
+    .home a {
+        width: 12rem;
+    }
+    
+    .home #banner .inner h2{
+        font-size: 1.2rem;
+    }
+    
+    .database h2 {
+        margin: 1vw 5vw 0 5vw;
+    }
+    
+    .signup {
+        width: 100%;
     }
 
-    .btn {
-        width: 66%;
+    .signup .organize h1{
+        font-size: 2rem;
+        width: 100%;
+        margin-top: 2rem;
     }
+}
 
-    footer {
-        top: 0;
-        justify-content: flex-end;
-        align-items: flex-start;
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 2rem;
     }
-
-    footer ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    footer ul li {
-        transform: scale(0.6);
-        font-size: 1.3rem;
-    }
-
-    footer ul li:hover {
-        transform: scale(0.8);
+    .signup .organize h1{
+        font-size: 1.5rem;
+        margin-top: 4rem;
     }
 }
